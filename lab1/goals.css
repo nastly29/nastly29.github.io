@@ -1,0 +1,253 @@
+@import url(main.css);
+
+.create-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.create-header{
+    text-align: center;
+    font-size: 35px; 
+    margin: 0 0 10px 0;
+}
+input[type="date"]::before {
+    content: attr(placeholder);
+    color: rgb(100, 99, 99);
+}
+
+.goal-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 700px;
+    gap:15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.goal-form input {
+    width: 100%; 
+    max-width: 600px; 
+    height: 50px; 
+    font-size: 23px; 
+    padding: 8px; 
+    border-radius: 8px; 
+    border: 1px solid #e1dada; 
+}
+
+.add-step-btn {
+    margin-top: 5px; 
+    align-items: center;
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: var(--bordo-color);
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+.add-step-btn:hover{
+    transform: scale(1.1);
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    width: 100%;
+    margin-top: 10px;
+}
+.button-container button {
+    flex: 1; 
+    max-width: 250px; 
+}
+
+.goals-title{
+    color: var(--bordo-color);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.goals-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    padding: 10px;
+    max-width: 1000px;
+    margin: auto;
+    gap: 20px;
+}
+.goal-card{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.goal-card h3{
+    color: var(--bordo-color);
+    text-align: center;
+}
+.goal-deadline{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+.goal-steps {
+    text-align: left;
+    padding: 10px;
+}
+.goal-steps li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+.goal-steps button{
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+/*Чекбокси*/
+.goal-steps input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--bordo-color);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    background-color: white;
+    align-items:center;
+    justify-content: center;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.goal-steps input[type="checkbox"]:checked {
+    background-color: var(--bordo-color);
+    border-color: var(--bordo-color);
+}
+.goal-steps input[type="checkbox"]::after {
+    content: '✔';
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Для телефону*/
+@media (max-width: 480px) {
+    .create-container {
+        margin-top: 20px;
+    }
+    .create-header {
+        font-size: 25px; 
+    }
+    .goal-form {
+        width: 95%; 
+        padding: 20px;
+    }
+    .goal-form input {
+        font-size: 16px; 
+        padding: 6px;
+        max-width: 100%; 
+    }
+    .button-container {
+        flex-direction: column;
+        width: 50%;
+        gap: 10px;
+    }
+    .button-container button {
+        font-size: 17px;
+    }
+    .goals-title {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 8px;
+    }
+    .goal-deadline{
+        font-size: 15px;
+        margin-top: 7px;
+    }
+    .goals-container {
+        grid-template-columns: 1fr; 
+        padding: 5px;
+        width: 90%;
+    }
+    .goal-card {
+        padding: 15px;
+    }
+    .goal-card h3 {
+        font-size: 20px;
+    }
+    .goal-steps {
+        padding: 10px;
+    }
+    .goal-steps li {
+        font-size: 16px;
+        gap: 5px;
+    }
+    .goal-steps input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        margin-right: 3px;
+    }
+}
+
+/*Для планшету*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .create-header {
+        font-size: 35px; 
+    }
+    .goal-form {
+        width: 95%; 
+        padding: 20px;
+    }
+    .goal-form input {
+        font-size: 20px; 
+    }
+    .button-container {
+        width: 50%;
+        gap: 10px;
+    }
+    .button-container button {
+        font-size: 23px;
+    }
+    .goals-title {
+        font-size: 30px;
+        margin-top: 30px;
+        margin-bottom: 8px;
+    }
+    .goal-deadline{
+        font-size: 25px;
+        margin-top: 7px;
+    }
+    .goal-card {
+        padding: 15px;
+
+    }
+    .goal-card h3 {
+        font-size: 30px;
+    }
+    .goal-steps {
+        padding: 10px;
+    }
+    .goal-steps li {
+        font-size: 25px;
+        gap: 5px;
+    }
+    .goal-steps input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+}

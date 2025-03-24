@@ -1,0 +1,156 @@
+@import url('main.css');
+
+.container{
+    background-size: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.post-form{
+    background: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 700px;
+    text-align: center;
+}
+.post-form textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    resize: none;
+    border: none;
+    outline: none;
+    color: var(--bordo-color);
+    box-shadow: 0 0 10px rgba(220, 28, 28, 0.4);
+}
+
+textarea::-webkit-scrollbar {
+    width: 10px;
+}
+textarea::-webkit-scrollbar-track {
+    background: #f8dada; 
+    border-radius: 10px;
+}
+textarea::-webkit-scrollbar-thumb {
+    background: var(--bordo-color); 
+    border-radius: 10px;
+    border: 2px solid #f8dada; 
+}
+
+.community-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+.post {
+    background: white;
+    width: 700px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+.username{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--bordo-color);
+    margin-bottom: 15px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+.heart-btn, .coment-btn{
+    background: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.4s;
+    font-size: 20px;
+    color: rgb(50, 49, 49);
+}
+.heart-icon{
+    font-size: 25px;
+    color: grey;   
+}
+.coment-icon{
+    font-size: 20px;
+    margin-bottom: -4px;
+}
+.heart-btn:hover{
+    transform: scale(1.1);
+}
+.coment-btn:hover{
+    transform: scale(1.1);
+}
+.heart-btn:focus .heart-icon,
+.heart-btn:active .heart-icon {
+    color: var(--bordo-color);
+}
+
+
+/*Для телефону*/
+@media(max-width: 480px){
+    .container{
+        width: 100%;
+    }
+    .post-form{
+        width: 100%;
+    }
+    .post-form textarea{
+        font-size: 18px;
+    }
+    .post p{
+        font-size: 20px;
+    }
+    .post{
+        width: 100%;
+    }
+    .username{
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    .coment-btn, .heart-btn{
+        font-size: 14px;
+    }
+    .heart-icon{
+        font-size: 14px;
+    }
+    .coment-icon {
+        width: 15px;  
+        height: auto;
+        margin-bottom: -2px; 
+    }    
+}
+
+/*Для планшету*/
+@media (min-width: 768px) and (max-width: 1024px){
+    .post-form textarea{
+        font-size: 25px;
+    }
+    .post p{
+        font-size: 25px;
+    }
+    .username{
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    .coment-btn, .heart-btn{
+        font-size: 20px;
+    }
+    .heart-icon{
+        font-size: 20px;
+    }
+    .coment-icon {
+        width: 20px;  
+        height: auto;
+        margin-bottom: -3px; 
+    }    
+}

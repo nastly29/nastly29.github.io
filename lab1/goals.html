@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Мої цілі | MyWay</title>
+        <link rel="stylesheet" href="goals.css">
+    </head>
+
+    <body>
+        <header class="header-background">
+            <nav>
+                <div class="logo">
+                    <span class="black">My</span><span class="orange">Way</span>
+                </div>
+                <span class="section">МОЇ ЦІЛІ</span>
+                <div class="menu-links">
+                    <a href="index.html">На головну</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="create-container">
+                <div class="goal-form">
+                    <h3 class="create-header">Створіть нову ціль!</h3>
+                    <input type="text" placeholder="Назва цілі">
+                    <input type="date" id="deadline" onfocus="this.type='date'" onblur="if(this.value==''){this.type='text'}" placeholder="Дедлайн">
+                    <div class="button-container">
+                        <button class="add-step-btn">Додати крок</button>
+                        <button class="user-button">Зберегти</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="goals-title">Кожна велика мрія починається з маленького кроку. Вперед до цілей!</h2>
+
+            <div class="goals-container">
+                <div class="goal-card">
+                    <h3>Вивчити JavaScript</h3>
+                    <p class='goal-deadline'>Дедлайн: 2025-06-01</p>
+                    <ul class="goal-steps">
+                        <li><label><input type="checkbox">Пройти курс</label></li>
+                        <li><label><input type="checkbox">Створити проект</label></li>
+                        <li><label><input type="checkbox">Написати тестовий код</label></li>
+                    </ul>
+                </div>
+
+                <div class="goal-card">
+                    <h3>Покращити англійську мову</h3>
+                    <p class='goal-deadline'>Дедлайн: 2025-09-25</p>
+                    <ul class="goal-steps">
+                        <li><label><input type="checkbox">Вивчити 1000 нових слів</label></li>
+                        <li><label><input type="checkbox">Подивитися 10 фільмів англійською</label></li>
+                        <li><label><input type="checkbox">Пройти онлайн-курс</label></li>
+                    </ul>
+                </div>
+                <div class="goal-card">
+                    <h3>Почати бігати щоранку</h3>
+                    <p class='goal-deadline'>Дедлайн: 2025-07-01</p>
+                    <ul class="goal-steps">
+                        <li><label><input type="checkbox">Купити зручне взуття</label></li>
+                        <li><label><input type="checkbox">Почати з 1 км і збільшувати дистанцію</label></li>
+                        <li><label><input type="checkbox">Бігати мінімум 3 рази на тиждень</label></li>
+                    </ul>
+                </div>
+                <div class="goal-card">
+                    <h3>Освоїти малювання</h3>
+                    <p class='goal-deadline'>Дедлайн: 2025-10-08</p>
+                    <ul class="goal-steps">
+                        <li><label><input type="checkbox">Купити матеріали</label></li>
+                        <li><label><input type="checkbox">Подивитись навчальні відео</label></li>
+                        <li><label><input type="checkbox">Намалювати 10 картин</label></li>
+                    </ul>
+                </div>
+                <div class="goal-card">
+                    <h3>Відвідати Італію</h3>
+                    <p class='goal-deadline'>Дедлайн: 2025-12-16</p>
+                    <ul class="goal-steps">
+                        <li><label><input type="checkbox">Забронювати квитки на автобус</label></li>
+                        <li><label><input type="checkbox">Забронювати житло</label></li>
+                        <li><label><input type="checkbox">Спланувати маршрути</label></li>
+                    </ul>
+                </div>
+                <div class="goal-card">
+                    <h3>Навчитися медитувати</h3>
+                    <p class='goal-deadline'>Дедлайн: 2025-07-30</p>
+                    <ul class="goal-steps">
+                        <li><label><input type="checkbox">Дослідити техніки медитації</label></li>
+                        <li><label><input type="checkbox">Медитувати по 10 хв щодня</label></li>
+                        <li><label><input type="checkbox">Вести щоденник самопочуття</label></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Контактна інформація: myway.info@gmail.com</p>
+            <p>&copy; 2025 MyWay. Всі права захищені</p>
+        </footer>
+    </body>
+</html>
