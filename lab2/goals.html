@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Мої цілі | MyWay</title>
+        <link rel="stylesheet" href="goals.css">
+    </head>
+
+    <body>
+        <header class="header-background">
+            <nav>
+                <div class="logo">
+                    <span class="black">My</span><span class="orange">Way</span>
+                </div>
+                <span class="section">МОЇ ЦІЛІ</span>
+                <div class="menu-links">
+                    <a href="index.html">На головну</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="create-container">
+                <div class="goal-form">
+                    <h3 class="create-header">Створіть нову ціль!</h3>
+                    <input type="text" placeholder="Назва цілі">
+                    <input type="date" id="deadline" onfocus="this.type='date'" onblur="if(this.value==''){this.type='text'}" placeholder="Дедлайн">
+                    <div class="button-container">
+                        <button class="add-step-btn">Додати крок</button>
+                        <button class="user-button">Зберегти</button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="goals-title">Кожна велика мрія починається з маленького кроку. Вперед до цілей!</h2>
+            <div class="goals-container"></div>
+        </main>
+
+        <footer>
+            <p>Контактна інформація: myway.info@gmail.com</p>
+            <p>&copy; 2025 MyWay. Всі права захищені</p>
+        </footer>
+        <script defer src="goals.js"></script>
+    </body>
+</html>

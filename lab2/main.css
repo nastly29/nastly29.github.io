@@ -1,0 +1,185 @@
+:root {
+    --bordo-color: #971d1d; 
+    --background-color: #ffe6e6;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden; 
+    font-size: 25px;
+    font-family:Garamond;
+    background-color: var(--background-color);
+}
+.section{
+    color: var(--bordo-color);
+    font-weight: bold;
+    font-size:50px;
+    text-align: center;
+    width: 100%; 
+}
+
+/*Все верхнє меню*/
+.header-background{
+    background-size: 100%;
+    background-position: center;
+    text-align: center;
+    color: black;
+    padding: 30px;
+    border-bottom: 2px solid black;
+}
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    width: 100%;
+    font-size:larger;
+    font-weight: bold; 
+    
+}
+nav a:hover{
+    color: var(--bordo-color);
+}
+nav .menu-links {
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+/*Кнопка*/
+.user-button {
+    background-color: var(--bordo-color);
+    color: white;
+    font-family:Garamond;
+    font-size: 25px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s
+}
+.user-button:hover {
+    transform: scale(1.04);
+}
+
+/*Логотип*/
+.logo {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    border: 2px solid var(--bordo-color);
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.4s ease-in-out, color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+.logo .black {
+    color: black;
+    transition: color 0.4s ease-in-out;
+}
+.logo .orange {
+    color: var(--bordo-color);
+    transition: color 0.4s ease-in-out;
+}
+.logo:hover {
+    transform: scale(1.2); 
+    background-color: var(--bordo-color); 
+    color: white; 
+}
+.logo:hover .black {
+    color: white; 
+}
+.logo:hover .orange {
+    color: black; 
+}
+
+/*Футер*/
+footer{
+    background-color: var(--bordo-color);
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background-size: 100%;
+    width: 100%;
+    line-height: 1.6;
+}
+
+/*Для телефону*/
+@media(max-width: 480px) {
+    html, body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-background {
+        text-align: center;
+        width: 100%;
+    }
+    .section{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    } 
+    .menu-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    nav a {
+        font-size: 21px;
+        display: block;
+        padding: 8px;
+    }
+    .user-button {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+    .logo {
+        font-size: 24px;
+        padding: 5px 10px;
+    }
+    footer{
+        padding: 15px;
+        line-height: 1.5;
+        font-size: 20px;
+    }
+}
+
+/*Для планшету*/
+@media (min-width: 768px) and (max-width: 1024px){
+    nav a {
+        font-size: 26px;
+        padding: 8px;
+    }
+    .user-button {
+        font-size: 22px;
+        padding: 8px 12px;
+    }
+    .section{
+        font-size: 35px;
+    }
+    footer{
+        padding: 15px;
+        line-height: 1.5;
+        font-size: 25px;
+    }
+}

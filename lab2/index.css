@@ -1,0 +1,335 @@
+@import url(main.css);
+
+/*Спадаюче меню до облікового запису*/
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 30px;
+    width: 100%;
+    top: 100%;
+    margin-top: 5px;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease; 
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+    opacity: 1;
+}
+.dropdown-content a{
+    display: block;
+    padding: 4px;
+}
+.dropdown-content a:hover { 
+    border-radius: 5px;
+}
+
+/*Основний заголовок*/
+.main-title {
+    font-size: 60px; 
+    font-weight: bold;
+    color: black; 
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+.title-descript{
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*Опис*/
+.about-section{
+    background-color: var(--bordo-color);
+    display: flex;
+    justify-content: center;
+}
+.about-container{
+    max-width: 900px;
+    text-align: left;
+    color: white;
+}
+.about-text {
+    padding: 20px;
+}
+.about-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.about-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/*Рухомі картки можливостей користувача*/
+.features-section, .faq-section {
+    margin: 40px 0;
+}
+.features-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+.feature-card {
+    background-color: var(--background-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.feature-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.feature-text {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    
+}
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+} 
+
+/*Для поширених запитань*/
+.faq-container{
+    max-width: 600px;
+    margin: auto;
+}
+.faq-item{
+    margin-bottom: 20px;
+    border: 2px solid var(--bordo-color);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+.faq-item:hover {
+    transform: scale(1.1);
+}
+.faq-answer{
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: var(--background-color);
+    border-top: 1px solid var(--bordo-color);   
+} 
+.faq-question{
+    padding: 10px;
+    color: var(--bordo-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    width: 570px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+    background-color: var(--background-color);
+}
+.faq-question:hover{
+    background-color: var(--background-color);
+}
+.arrow {
+    font-size: 14px;
+    color: var(--bordo-color);
+    transition: transform 0.3s;
+    margin-left: auto; 
+}
+details[open] .arrow{
+    transform: rotate(180deg);
+}
+
+/*Таймер*/
+.motivational-reminder {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    color: var(--bordo-color);
+    padding: 22px;
+    border-radius: 12px;
+    max-width: 400px;
+    font-size: 23px;
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .motivational-reminder strong {
+    margin-bottom: 8px;
+    font-size: 23px;
+    color: #d9534f;
+  }
+  
+  .motivational-reminder ul {
+    padding-left: 15px;
+    margin: 7px;
+  }
+  
+  .motivational-reminder hr {
+    margin: 15px auto;
+    border: none;
+    border-top: 1px solid var(--bordo-color);
+    width: 100%;
+  }
+
+  .close-reminder {
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: var(--bordo-color);
+    cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+ 
+/*Для планшету*/
+@media (min-width: 768px) and (max-width: 1024px){
+    .main-title{
+        font-size: 35px;
+        margin: 10px auto;
+    }
+    .title-descript{
+        font-size: 25px; 
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    .about-text p{
+        font-size: 25px;
+        text-align: justify;
+        line-height: 1.4;
+    }
+    .about-container {
+        padding: 10px;
+    }
+    .features-title{
+        font-size: 35px;  
+    }
+    .features-container {
+        flex-direction: row;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .feature-card{
+        width: 200px;
+        height: 285px;
+    }
+   .faq-question {
+        font-size: 25px;
+        padding: 12px; 
+    }
+    .faq-answer {
+        padding: 10px;
+        font-size: 25px;
+        text-align: left;
+    }
+    .faq-item {
+        margin-bottom: 10px;
+        transition: all 0.5s ease;
+    }
+    .faq-item:hover {
+        transform: scale(1.05);
+    }
+}
+
+/*Для телефону*/
+@media(max-width: 480px){
+    .main-title{
+        font-size: 30px;
+        text-align: center;
+        margin: 10px auto;
+    }
+    .title-descript{
+        font-size: 18px; 
+        text-align: center;
+        margin: 0 auto;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    .about-text {
+        font-size: 18px;
+        text-align: justify;
+        line-height: 1.1;
+        margin: 0 auto;
+    }
+    .about-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .features-title{
+        font-size: 25px;  
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .feature-card img{
+        display: none;
+    }
+    .feature-text{
+        color: var(--bordo-color);
+    }
+    .faq-section {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .faq-container {
+        width: 90%;
+        margin: auto;
+    }
+    .faq-item {
+        margin-bottom: 10px;
+        transition: all 0.5s ease;
+    }
+    .faq-item:hover {
+        transform: scale(1.05);
+    }
+   .faq-question {
+        width: 100%;
+        font-size: 18px;
+        text-align: left;
+        padding: 12px;
+        display: flex;
+    }
+    .faq-answer {
+        padding: 10px;
+        font-size: 18px;
+        text-align: left;
+    }
+    .motivational-reminder{
+        max-width: 60%;  
+    }
+}
