@@ -20,6 +20,7 @@ app.get('/api/completed-goals', async (req, res) => {
     const snap = await db
       .collection(`users/${uid}/goals`)
       .where('status', '==', 'completed')
+      .orderBy('completedAt', 'desc')
       .get();
     res.json(snap.docs.map(d => ({ id: d.id, ...d.data() })));
   } catch (e) {
